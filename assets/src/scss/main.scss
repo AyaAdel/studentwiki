@@ -1,0 +1,61 @@
+// Imports
+@import '_variables';
+@import '_week';
+
+// Framework
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.nav-pills .nav-link {
+  border-radius: 0;
+}
+
+.breadcrumb {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+ul {
+  line-height: 1.8;
+}
+
+.navbar-brand {
+  margin: 0;
+}
+
+.btn {
+  padding: 0;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
