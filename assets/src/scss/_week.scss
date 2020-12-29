@@ -116,6 +116,14 @@
       padding: 21px 28px 0 60px;
     }
 
+    .breadcrumb {
+      background-color: $white;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+      content: '>';
+    }
+
     .breadcrumb-mobile-menu {
       display: none;
 
@@ -126,19 +134,37 @@
 
       .accordion-item {
         margin-bottom: 20px;
+        border: 0;
+      }
+
+      .card-header {
+        padding: 0;
+        background-color: transparent;
       }
 
       .accordion-button {
+        margin: 0;
         padding: 10px 20px;
         background-color: transparent;
         color: $secondary-color;
         border: 0;
         font-size: 18px;
         font-weight: 600;
-        box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.12);
+        text-decoration: none;
+        @include flexBetween;
 
         &.collapsed {
           box-shadow: none;
+        }
+
+        &[aria-expanded='true'] .fa {
+          transform: rotate(180deg);
+          transition: all 0.5s ease-in-out;
+        }
+
+        &[aria-expanded='false'] .fa {
+          transition: all 0.5s ease-in-out;
         }
       }
 
@@ -161,7 +187,7 @@
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
       display: none;
 
-      &.show .btn {
+      &.show .close-btn {
         margin: 0 0 40px 20px;
         background-color: transparent;
       }
@@ -609,6 +635,10 @@
         padding: 0;
       }
 
+      .breadcrumb {
+        background-color: transparent;
+      }
+
       .breadcrumb-wrapper {
         height: 55px;
         padding: 0 15px;
@@ -627,7 +657,6 @@
           position: relative;
           z-index: 2;
           margin-right: 15px;
-          background: $light-gray;
         }
       }
 

@@ -13,7 +13,9 @@ ul {
   list-style: none;
 }
 
-a {
+a,
+a:hover,
+.btn-link:hover {
   text-decoration: none;
 }
 
@@ -58,4 +60,8 @@ ul {
 
 .show {
   display: block !important;
+}
+
+button:focus {
+  outline: none;
 }
