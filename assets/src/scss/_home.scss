@@ -1,0 +1,17 @@
+.home {
+  header {
+    nav {
+      height: 80px;
+      padding: 0 28px;
+      background-color: $secondary-color;
+      @include flexBetween;
+    }
+
+    .login {
+      width: 70px;
+      height: 38px;
+      border-radius: 30px;
+      @include flexCenter;
+    }
+  }
+}
