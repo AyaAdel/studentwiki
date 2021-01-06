@@ -1,17 +1,236 @@
 .home {
   header {
     nav {
-      height: 80px;
-      padding: 0 28px;
+      position: fixed;
+      z-index: 3;
+      width: 100%;
+      height: 80 / $rem;
+      padding: 0 28 / $rem;
       background-color: $secondary-color;
       @include flexBetween;
     }
 
     .login {
-      width: 70px;
-      height: 38px;
-      border-radius: 30px;
+      width: 70 / $rem;
+      height: 38 / $rem;
+      border-radius: 30 / $rem;
       @include flexCenter;
+    }
+
+    .quality-simpliciy-wrapper {
+      padding-top: 80 / $rem;
+      background-color: $secondary-color;
+    }
+
+    .quality-simpliciy {
+      padding: 24 / $rem 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30 / $rem;
+    }
+
+    h1 {
+      margin-bottom: 8 / $rem;
+      color: $white;
+      font-size: 56 / $rem;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 20 / $rem;
+      color: $white;
+    }
+
+    .form-item + .form-item {
+      margin-top: 10 / $rem;
+    }
+
+    form .btn {
+      width: 125 / $rem;
+      height: 38 / $rem;
+      margin-top: 15 / $rem;
+      @include flexCenter;
+    }
+  }
+
+  .wiki-computer-wrapper {
+    padding: 80 / $rem 0 20 / $rem;
+    background-color: $white;
+
+    .wiki-computer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 3%;
+    }
+
+    .wiki-computer-content {
+      display: flex;
+    }
+
+    span {
+      margin-right: 15 / $rem;
+      color: $primary-color;
+      font-size: 104 / $rem;
+      line-height: 95 / $rem;
+    }
+
+    h2 {
+      color: $secondary-color;
+      font-size: 56 / $rem;
+      font-weight: 700;
+    }
+  }
+
+  .teams-wrapper {
+    background-image: linear-gradient(180deg, white 50%, rgb(254, 194, 12) 0%);
+
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    li {
+      width: 275 / $rem;
+      height: 275 / $rem;
+      padding: 15 / $rem;
+      background-color: $white;
+      text-align: center;
+      box-shadow: 5 / $rem 5 / $rem 15 / $rem rgba(0, 0, 0, 0.12), -5 / $rem -5 / $rem 15 / $rem rgba(0, 0, 0, 0.12);
+
+      & + li {
+        margin-left: 30 / $rem;
+      }
+    }
+
+    h3 {
+      margin-bottom: 5 / $rem;
+      color: $secondary-color;
+      font-size: 40 / $rem;
+      font-weight: 700;
+    }
+
+    .wij {
+      margin-top: 40 / $rem;
+    }
+
+    .jullie {
+      margin-top: 90 / $rem;
+    }
+  }
+
+  .login-section {
+    padding: 50 / $rem 0;
+    background-color: $primary-color;
+    @include flexCenter;
+
+    .btn {
+      width: 200 / $rem;
+      height: 68 / $rem;
+      font-size: 24 / $rem;
+      @include flexCenter;
+    }
+  }
+
+  footer {
+    padding: 50 / $rem 0;
+    background-color: $secondary-color;
+
+    .footer-content {
+      @include flexBetween;
+    }
+
+    h5 {
+      margin-bottom: 20 / $rem;
+      color: $white;
+    }
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    .fa {
+      margin-right: 10 / $rem;
+      font-size: 18 / $rem;
+    }
+  }
+}
+
+// Media Query
+@media (max-width: 991/ $rem) {
+  .home {
+    .teams-wrapper li {
+      height: 265 / $rem;
+    }
+  }
+}
+
+@media (max-width: 767/ $rem) {
+  .home {
+    header {
+      .quality-simpliciy {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+      }
+
+      form .btn {
+        width: 100%;
+      }
+    }
+
+    .wiki-computer-wrapper {
+      padding: 50 / $rem 0;
+
+      .wiki-computer {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      span {
+        font-size: 60 / $rem;
+        line-height: 60 / $rem;
+      }
+
+      h2 {
+        font-size: 40 / $rem;
+      }
+    }
+
+    .teams-wrapper {
+      ul {
+        display: block;
+      }
+
+      li {
+        width: 100%;
+        height: auto;
+
+        & + li {
+          margin-left: 0;
+        }
+      }
+
+      .wij,
+      .jullie {
+        margin: 0 0 15 / $rem;
+      }
+    }
+
+    footer {
+      .footer-content {
+        flex-direction: column;
+      }
+
+      .links {
+        margin-bottom: 20 / $rem;
+      }
+
+      h5 {
+        margin-bottom: 8 / $rem;
+        text-align: center;
+      }
     }
   }
 }
