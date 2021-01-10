@@ -15,7 +15,7 @@ $(document).ready(function () {
     dots: true,
     dotsClass: 'slick-dots',
     vertical: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     infinite: true,
   });
