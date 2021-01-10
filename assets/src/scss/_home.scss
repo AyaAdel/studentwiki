@@ -250,7 +250,7 @@
   }
 
   .login-section {
-    height: 735 / $rem;
+    height: 55.9375rem;
     padding-top: 30 / $rem;
     background-size: cover;
     background-position: center;
@@ -566,6 +566,7 @@
     }
 
     .teams-wrapper {
+      overflow: hidden;
       height: 640px;
       padding: 130 / $rem 0 0;
 
