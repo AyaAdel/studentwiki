@@ -3,7 +3,8 @@ $rem: 16 / 1rem;
 
 // Variables
 $primary-color: #ffc20a;
-$secondary-color: rgb(114, 96, 240);
+$secondary-color: #7563f7;
+$light-secondary-color: #f1f0f7;
 $white: #ffffff;
 $nav-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 $primary-color-shadow: 2px 2px 0px #fcf1ce;
@@ -11,6 +12,7 @@ $btn-shadow: 3px 4px rgba(0, 0, 0, 0.2);
 $dark-gray: #d6d5db;
 $light-gray: #f1f0f7;
 $secondary-color-shadow: 2px 3px #6151ca33;
+$card-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.12), -0.3125rem -0.3125rem 0.9375rem rgba(0, 0, 0, 0.12);
 
 // Mixin
 @mixin flexCenter {
@@ -28,6 +30,13 @@ $secondary-color-shadow: 2px 3px #6151ca33;
 @mixin flexEnd {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 

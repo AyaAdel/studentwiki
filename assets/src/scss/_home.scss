@@ -10,227 +10,745 @@
       @include flexBetween;
     }
 
+    .nav-btns {
+      display: flex;
+    }
+
     .login {
-      width: 70 / $rem;
-      height: 38 / $rem;
+      width: 95 / $rem;
+      height: 42 / $rem;
+      margin-right: 18 / $rem;
+      font-size: 14 / $rem;
+      font-weight: 500;
       border-radius: 30 / $rem;
       @include flexCenter;
     }
 
+    .sign-in {
+      width: 140 / $rem;
+      height: 42 / $rem;
+      font-size: 14 / $rem;
+      font-weight: 500;
+      @include flexCenter;
+    }
+
     .quality-simpliciy-wrapper {
+      position: relative;
+      // overflow: hidden;
       padding-top: 80 / $rem;
       background-color: $secondary-color;
     }
 
     .quality-simpliciy {
-      padding: 24 / $rem 0;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 30 / $rem;
+      padding: 24 / $rem 0 60 / $rem;
+    }
+
+    .quality-content {
+      width: 50%;
     }
 
     h1 {
-      margin-bottom: 8 / $rem;
       color: $white;
-      font-size: 56 / $rem;
-      font-weight: 700;
+      font-size: 70 / $rem;
+      font-weight: 900;
+      letter-spacing: 3 / $rem;
     }
 
     p {
-      margin-bottom: 20 / $rem;
+      margin-bottom: 25 / $rem;
       color: $white;
+      font-size: 18 / $rem;
+      font-weight: 600;
     }
 
-    .form-item + .form-item {
-      margin-top: 10 / $rem;
+    .form-item {
+      margin-bottom: 10 / $rem;
     }
 
     form .btn {
-      width: 125 / $rem;
-      height: 38 / $rem;
-      margin-top: 15 / $rem;
+      width: 210 / $rem;
+      height: 42 / $rem;
+      font-size: 15 / $rem;
       @include flexCenter;
+    }
+
+    .quality-image {
+      position: absolute;
+      bottom: -4.8125rem;
+      width: 55%;
+      right: 0;
+      overflow: hidden;
+
+      img {
+        position: relative;
+        right: -27px;
+      }
     }
   }
 
   .wiki-computer-wrapper {
-    padding: 80 / $rem 0 20 / $rem;
+    padding: 80 / $rem 0 50 / $rem;
     background-color: $white;
-
-    .wiki-computer {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 3%;
-    }
 
     .wiki-computer-content {
       display: flex;
     }
 
     span {
-      margin-right: 15 / $rem;
+      margin-right: 20 / $rem;
       color: $primary-color;
-      font-size: 104 / $rem;
-      line-height: 95 / $rem;
+      font-size: 130 / $rem;
+      font-weight: 900;
+      font-family: 'Prompt', sans-serif;
+      line-height: 122 / $rem;
     }
 
     h2 {
       color: $secondary-color;
-      font-size: 56 / $rem;
+      font-size: 63 / $rem;
+      font-weight: 900;
+    }
+  }
+
+  .update-wrapper {
+    background-size: cover;
+    background-position: center;
+
+    .update {
+      height: 518 / $rem;
+      @include flexEnd;
+    }
+
+    ul {
+      margin-right: 55 / $rem;
+    }
+
+    li {
+      width: 560 / $rem;
+      padding: 10 / $rem;
+      background-color: $white;
+      display: flex;
+      box-shadow: $card-shadow;
+
+      & + li {
+        margin-top: 15 / $rem;
+      }
+    }
+
+    .disable {
+      width: 80%;
+      margin: 15 / $rem auto;
+      color: #c5c5c5;
+      font-size: 21 / $rem;
       font-weight: 700;
+    }
+
+    span {
+      margin-right: 10 / $rem;
+      font-size: 21 / $rem;
+      font-weight: 900;
+      font-family: 'Prompt', sans-serif;
+    }
+
+    h4 {
+      margin-bottom: 5 / $rem;
+      font-size: 35 / $rem;
+      color: $secondary-color;
+    }
+
+    .active {
+      span {
+        color: $secondary-color;
+      }
+
+      p {
+        font-family: 'Source Sans Pro', sans-serif;
+      }
+    }
+
+    .img-wrapper {
+      display: none;
     }
   }
 
   .teams-wrapper {
-    background-image: linear-gradient(180deg, white 50%, rgb(254, 194, 12) 0%);
+    height: 812 / $rem;
+    padding: 50 / $rem 0;
+    background-size: cover;
+    background-position: center;
 
-    ul {
-      display: flex;
-      justify-content: center;
-    }
+    .teams-hint {
+      margin-bottom: 50 / $rem;
+      @include flexEnd;
+      align-items: flex-start;
 
-    li {
-      width: 275 / $rem;
-      height: 275 / $rem;
-      padding: 15 / $rem;
-      background-color: $white;
-      text-align: center;
-      box-shadow: 5 / $rem 5 / $rem 15 / $rem rgba(0, 0, 0, 0.12), -5 / $rem -5 / $rem 15 / $rem rgba(0, 0, 0, 0.12);
-
-      & + li {
-        margin-left: 30 / $rem;
+      span {
+        margin-left: 20 / $rem;
+        color: $primary-color;
+        font-size: 130 / $rem;
+        font-weight: 900;
+        font-family: 'Prompt', sans-serif;
+        line-height: 122 / $rem;
       }
     }
 
-    h3 {
-      margin-bottom: 5 / $rem;
+    .teams {
+      ul {
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15 / $rem;
+      }
+
+      li {
+        height: 370 / $rem;
+        padding: 40 / $rem 20 / $rem;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-shadow: $card-shadow;
+      }
+    }
+
+    h2 {
       color: $secondary-color;
-      font-size: 40 / $rem;
+      font-size: 63 / $rem;
+      font-weight: 900;
+      text-align: right;
+    }
+
+    .img-wrapper {
+      width: 80 / $rem;
+      margin-bottom: 30 / $rem;
+    }
+
+    h5 {
+      margin-bottom: 10 / $rem;
+      color: $secondary-color;
+      font-size: 21 / $rem;
       font-weight: 700;
     }
 
-    .wij {
+    p {
+      font-weight: 400;
+    }
+
+    .find {
       margin-top: 40 / $rem;
     }
 
-    .jullie {
-      margin-top: 90 / $rem;
+    .edit {
+      margin-top: 80 / $rem;
+    }
+
+    .teams-slider {
+      display: none;
     }
   }
 
   .login-section {
-    padding: 50 / $rem 0;
-    background-color: $primary-color;
-    @include flexCenter;
+    height: 735 / $rem;
+    padding-top: 30 / $rem;
+    background-size: cover;
+    background-position: center;
+
+    .login-section-wrapper {
+      @include flexBetween;
+    }
+
+    .login-content {
+      width: 70%;
+      color: $white;
+    }
+
+    h3 {
+      margin-bottom: 10 / $rem;
+      font-size: 49 / $rem;
+      font-weight: 900;
+    }
+
+    p {
+      font-size: 24 / $rem;
+    }
 
     .btn {
-      width: 200 / $rem;
+      width: 233 / $rem;
       height: 68 / $rem;
       font-size: 24 / $rem;
       @include flexCenter;
     }
   }
 
-  footer {
-    padding: 50 / $rem 0;
-    background-color: $secondary-color;
+  .testimonials {
+    padding: 30 / $rem 0 60 / $rem;
 
-    .footer-content {
-      @include flexBetween;
+    .testimonials-info {
+      margin-bottom: 20 / $rem;
+      display: flex;
+
+      span {
+        margin-right: 20 / $rem;
+        color: $primary-color;
+        font-size: 130 / $rem;
+        font-weight: 900;
+        font-family: 'Prompt', sans-serif;
+        line-height: 122 / $rem;
+      }
+
+      p {
+        color: $secondary-color;
+        font-size: 21 / $rem;
+        font-weight: 600;
+      }
+    }
+
+    h2 {
+      color: $secondary-color;
+      font-size: 3.9375rem;
+      font-weight: 900;
+    }
+
+    .testimonials-slider {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .slideshow {
+      position: relative;
+      width: 80%;
+      height: 430 / $rem;
+      margin: 0 0 0 18%;
+
+      .img-wrapper {
+        width: 430 / $rem;
+      }
+
+      .fa {
+        margin-left: 210 / $rem;
+        color: lighten($secondary-color, 20);
+        font-size: 21 / $rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        &.fa-angle-up {
+          margin-bottom: 25 / $rem;
+        }
+
+        &.fa-angle-down {
+          margin-top: 25 / $rem;
+        }
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+
+    .slick-list.draggable {
+      height: 340 / $rem !important;
+    }
+
+    .slick-vertical .slick-slide {
+      height: 473 / $rem !important;
+    }
+
+    .testimonial-slide-content {
+      width: 740 / $rem;
+      height: 325 / $rem;
+      position: relative;
+
+      img {
+        width: 425 / $rem;
+      }
+    }
+
+    .slick-dots {
+      top: 0;
+      bottom: 0;
+      right: 110%;
+      right: 0;
+      left: -90 / $rem;
+      width: 30 / $rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      li {
+        margin-bottom: 10 / $rem;
+      }
+    }
+
+    .slick-dots li button:before {
+      color: $secondary-color;
+      font-size: 13 / $rem;
+    }
+
+    .testimonials-speak {
+      position: absolute;
+      right: 0;
+      top: 28%;
+      z-index: 3;
+      width: 385 / $rem;
+      padding: 20 / $rem;
+      margin-left: -40 / $rem;
+      background-color: $white;
+      color: $primary-color;
+      border: 2 / $rem solid $primary-color;
+    }
+
+    p {
+      margin-bottom: 10 / $rem;
+      font-size: 35 / $rem;
+      font-weight: 300;
+      font-family: 'Prompt', sans-serif;
+      line-height: 1.4;
     }
 
     h5 {
-      margin-bottom: 20 / $rem;
-      color: $white;
+      font-size: 35 / $rem;
+      font-weight: 700;
+    }
+  }
+
+  footer {
+    height: 45 / $rem;
+    padding: 0 28 / $rem;
+    background-color: $light-secondary-color;
+    @include flexBetween;
+
+    ul {
+      display: flex;
     }
 
-    a {
-      color: $white;
+    .fa {
+      color: $secondary-color;
+      font-size: 30 / $rem;
 
       &:hover {
         color: $primary-color;
       }
     }
 
-    .fa {
-      margin-right: 10 / $rem;
-      font-size: 18 / $rem;
+    a {
+      margin-right: 20 / $rem;
+      color: $secondary-color;
+
+      &:hover {
+        color: $primary-color;
+      }
     }
   }
 }
 
 // Media Query
-@media (max-width: 991/ $rem) {
+@media (max-width: 991px) {
   .home {
-    .teams-wrapper li {
-      height: 310 / $rem;
+    font-size: 14 / $rem;
+
+    .teams-wrapper .teams {
+      ul {
+        width: 100%;
+      }
+
+      li {
+        height: 400 / $rem;
+      }
+    }
+
+    .login-section {
+      .login-section-wrapper {
+        display: block;
+      }
+
+      .login-content {
+        width: 100%;
+        margin-bottom: 20 / $rem;
+      }
+    }
+
+    .testimonials {
+      .slideshow {
+        margin: 0 0 0 15%;
+      }
+
+      .testimonial-slide-content img {
+        width: 310 / $rem;
+      }
+
+      .testimonials-speak {
+        transform: scale(0.7);
+        right: 180 / $rem;
+      }
+
+      .slick-dots {
+        left: -75 / $rem;
+      }
     }
   }
 }
 
-@media (max-width: 767/ $rem) {
+@media (max-width: 767px) {
   .home {
     header {
-      .quality-simpliciy {
-        grid-template-columns: repeat(1, 1fr);
-        text-align: center;
+      nav {
+        padding: 0 15 / $rem;
       }
 
-      form .btn {
+      .login {
+        display: none;
+      }
+
+      .quality-simpliciy-wrapper {
+        padding-bottom: 40 / $rem;
+      }
+
+      .quality-simpliciy {
+        margin-bottom: 120 / $rem;
+        padding-bottom: 110 / $rem;
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .quality-content {
         width: 100%;
+      }
+
+      h1 {
+        font-size: 35 / $rem;
+      }
+
+      .quality-image {
+        width: 65%;
+
+        img {
+          width: 100%;
+          bottom: -25%;
+        }
       }
     }
 
     .wiki-computer-wrapper {
       padding: 50 / $rem 0;
 
-      .wiki-computer {
-        grid-template-columns: repeat(1, 1fr);
-      }
-
       span {
-        font-size: 60 / $rem;
-        line-height: 60 / $rem;
+        margin-right: 5 / $rem;
+        font-size: 50 / $rem;
+        line-height: 53 / $rem;
       }
 
       h2 {
-        font-size: 40 / $rem;
+        font-size: 30 / $rem;
+      }
+    }
+
+    .update-wrapper {
+      background-image: none !important;
+      background-color: $primary-color;
+
+      .update {
+        display: block;
+      }
+
+      ul {
+        margin: 0 0 30px 0;
+      }
+
+      li,
+      .disable {
+        width: 100%;
+      }
+
+      .img-wrapper {
+        display: block;
       }
     }
 
     .teams-wrapper {
-      ul {
-        display: block;
+      height: 640px;
+      padding: 130 / $rem 0 0;
+
+      .teams-hint span {
+        margin-left: 5 / $rem;
+        font-size: 50 / $rem;
+        line-height: 53 / $rem;
       }
 
-      li {
-        width: 100%;
-        height: auto;
+      h2 {
+        font-size: 30 / $rem;
+      }
 
-        & + li {
-          margin-left: 0;
+      .teams ul {
+        display: none;
+      }
+
+      .teams-slider {
+        display: block;
+
+        .slick-track {
+          display: flex;
+          align-items: center;
+        }
+
+        .slick-slide {
+          height: 300 / $rem;
+          padding: 0 20px;
+          background-color: $white;
+          text-align: center;
+          box-shadow: $card-shadow;
+          @include flexColumnCenter;
+
+          & + .slick-slide {
+            margin-left: 15 / $rem;
+          }
+        }
+
+        .slick-dots {
+          position: relative;
+
+          li button:before {
+            color: lighten($white, 10);
+            font-size: 12 / $rem;
+          }
+
+          li.slick-active button:before {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .login-section {
+      p {
+        font-size: 18 / $rem;
+
+        br {
+          display: none;
         }
       }
 
-      .wij,
-      .jullie {
-        margin: 0 0 15 / $rem;
+      h3 {
+        font-size: 30 / $rem;
+      }
+
+      .btn-wrapper a {
+        width: 120 / $rem;
+        height: 50 / $rem;
+        font-size: 18 / $rem;
+      }
+    }
+
+    .testimonials {
+      margin: 30px 0;
+
+      .testimonials-info {
+        span {
+          margin-right: 5 / $rem;
+          font-size: 50 / $rem;
+          line-height: 53 / $rem;
+        }
+
+        p {
+          font-size: 18 / $rem;
+
+          br {
+            display: none;
+          }
+        }
+      }
+
+      h2 {
+        font-size: 30 / $rem;
+        margin-bottom: 10px;
+      }
+
+      .testimonials-slider {
+        .slideshow {
+          height: 290px;
+        }
+
+        h5 {
+          font-size: 22 / $rem;
+        }
+
+        p {
+          font-size: 18 / $rem;
+        }
+
+        img {
+          width: 200px;
+        }
+
+        .testimonials-speak {
+          width: 206px;
+          bottom: 56px;
+          left: 20%;
+        }
+
+        .slick-list.draggable {
+          height: 16.25rem !important;
+        }
+
+        .slick-dots {
+          left: -45px;
+        }
+
+        .fa {
+          margin-left: 100px;
+        }
       }
     }
 
     footer {
-      .footer-content {
-        flex-direction: column;
-      }
+      height: auto;
+      padding: 20px 0;
+      display: block;
 
       .links {
-        margin-bottom: 20 / $rem;
+        display: none;
       }
 
-      h5 {
-        margin-bottom: 8 / $rem;
+      ul {
+        display: block;
         text-align: center;
       }
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .home {
+    header .quality-image {
+      width: 90%;
+    }
+
+    .teams-wrapper {
+      padding-top: 100px;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .home {
+    header .quality-image {
+      width: 100%;
+    }
+
+    .teams-wrapper {
+      height: 650px;
+      // padding: 35px 0;
+
+      .teams-slider .slick-slide {
+        height: 330px;
+      }
+    }
+
+    .testimonials .testimonials-slider .testimonials-speak {
+      left: 15%;
     }
   }
 }
