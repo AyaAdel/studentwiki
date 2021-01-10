@@ -24,6 +24,8 @@ $(document).ready(function () {
     centerMode: true,
     centerPadding: '100px',
     slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
     dots: true,
     dotsClass: 'slick-dots',
     responsive: [
